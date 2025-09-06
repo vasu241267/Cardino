@@ -1,1 +1,1 @@
-web: python clintiavs.py
+web: python clintivas.py
