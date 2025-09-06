@@ -19,11 +19,11 @@ WS_URL = os.environ.get("WS_URL") or "wss://ivasms.com:2087/socket.io/?token=eyJ
 AUTH_MESSAGE = os.environ.get("AUTH_MESSAGE") or "7d8f6191d6b3f074c60a8b326466582e"
 PING_INTERVAL = int(os.environ.get("PING_INTERVAL", 15))  # default 25 sec
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN") or "8262385394:AAF0saW-oHo-jxVESI5D1QbXu7ACpMfspFU"
-GROUP_ID = os.environ.get("GROUP_ID") or "-1002717088045"
-CHANNEL_URL = os.environ.get("CHANNEL_URL") or "https://t.me/mrchd112"
+BOT_TOKEN = os.environ.get("BOT_TOKEN") or "8404630188:AAGW9sjETnEKcb9WbyD6MVdmqZHyOOqPB88"
+GROUP_ID = os.environ.get("GROUP_ID") or "-1002381674077"
+CHANNEL_URL = os.environ.get("CHANNEL_URL") or "https://t.me/+6LEttFWVymA0MDc1"
 DEV_URL = os.environ.get("DEV_URL") or "https://t.me/vxxwo"
-CHAT_URL = "https://t.me/DDXOTP"
+CHAT_URL = "https://t.me/HunterOFMethod"
 
 # -------------------- TELEGRAM --------------------
 
@@ -36,7 +36,7 @@ def send_to_telegram(text):
         "inline_keyboard": [
             [
                 {"text": "👑 Channel", "url": CHANNEL_URL},
-                {"text": "🖥️ Developer", "url": DEV_URL}
+                
             ],
             [
                 {"text": "🤝 Managed By", "url": CHAT_URL},
@@ -130,18 +130,15 @@ def on_message(ws, message):
                 service = "WhatsApp" if "whatsapp" in raw_msg.lower() else "Unknown"
 
                 telegram_msg = (
-    "<blockquote>🔔 <b><u>New OTP Alert</u></b></blockquote>\n"
-    "━━━━━━━━━━━━━━━━━━━━\n"
-    f"<blockquote>🌍 <b>Country:</b> <code>{country}</code></blockquote>\n"
-    f"<blockquote>🔑 <b>OTP:</b> <code>{otp}</code></blockquote>\n"
-    f"<blockquote>🕒 <b>Time:</b> <code>{now}</code></blockquote>\n"
-    f"<blockquote>📢 <b>Service:</b> <code>{originator}</code></blockquote>\n"
-    f"<blockquote>📱 <b>Number:</b> <code>{masked}</code></blockquote>\n"
-    "━━━━━━━━━━━━━━━━━━━━\n"
-    "<blockquote>💬 <b>Message:</b></blockquote>\n"
-    f"<blockquote><pre>{html.escape(raw_msg)}</pre></blockquote>\n"
-    "━━━━━━━━━━━━━━━━━━━━\n\n"
-    "<blockquote><i>⚡ Delivered instantly via @DDxOTP</i></blockquote>"
+    "<b>✅ New OTP Received Successfully...</b>\n"
+    f"🕒 <b>Time:</b> <code>{now}</code>\n"
+    f"🌍 <b>Country:</b> <code>{country}</code>\n"
+    f"🔑 <b>OTP:</b> <code>{otp}</code>\n"
+    f"📢 <b>Service:</b> <code>{originator}</code>\n"
+    f"📱 <b>Number:</b> <code>{masked}</code>\n\n"
+    "💬 <b>Message:</b>\n"
+    f"<pre>{html.escape(raw_msg)}</pre>\n\n"
+    "<i>⚡ POWERED BY Hunter OF Method</i>"
 )
 
 
