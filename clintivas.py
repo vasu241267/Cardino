@@ -21,8 +21,8 @@ PING_INTERVAL = int(os.environ.get("PING_INTERVAL", 15))  # default 25 sec
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN") 
 GROUP_ID = "-1002381674077"
-CHANNEL_URL =  "https://t.me/+EbuVesICzdszYzM1"
-DEV_URL = "https://t.me/HunterOFMethod"
+CHANNEL_URL =  "https://t.me/+gGKIoEqh7cc2YjA1"
+DEV_URL = "https://t.me/+MZz_8Gk6F142ODZl"
 
 
 # -------------------- TELEGRAM --------------------
