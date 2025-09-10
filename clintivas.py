@@ -19,10 +19,10 @@ WS_URL = "wss://ivasms.com:2087/socket.io/?token=eyJpdiI6ImYrbE13cEVwYmlKQ3dsRUV
 AUTH_MESSAGE = "e47c178cfff8f4cfe005ac1bfbd6249f"
 PING_INTERVAL = int(os.environ.get("PING_INTERVAL", 15))  # default 25 sec
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN") or "8082034939:AAGSAEufuTQsDr3pZm197oyBavBIh2NqUPo"
-GROUP_ID = os.environ.get("GROUP_ID") or "-1002381674077"
-CHANNEL_URL = os.environ.get("CHANNEL_URL") or "https://t.me/+EbuVesICzdszYzM1"
-DEV_URL = os.environ.get("DEV_URL") or "https://t.me/HunterOFMethod"
+BOT_TOKEN = os.environ.get("BOT_TOKEN") 
+GROUP_ID = "-1002381674077"
+CHANNEL_URL =  "https://t.me/+EbuVesICzdszYzM1"
+DEV_URL = "https://t.me/HunterOFMethod"
 
 
 # -------------------- TELEGRAM --------------------
