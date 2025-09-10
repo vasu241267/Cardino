@@ -16,14 +16,14 @@ start_pinging = False
 import os
 
 WS_URL = os.environ.get("WS_URL") or "wss://ivasms.com:2087/socket.io/?token=eyJpdiI6IkcyeVFWbFk1ZnhmWlZEZUUyOHZnSUE9PSIsInZhbHVlIjoiQWZRYWZmTnUxbHB4VVh2NGNUY0puckVURkZTTy9WMnBIbDMwL1llWFh3QVFRVDczZjVDWTNQUDN1c1IrY1ZqWW1zUS9PWlJic01EMnAyMmRxNVMyV3AvTFZwR1ZTeHNJY0ZaUS9uNU1Rc0xub2s1QTZsZFpZVTBvT2NHLzUvc0FnUGo3b2wxc2FrVXlER3lpeWJ3WmFBZDhEVnI1VEFQTkFyOTYyM2dsT2ZyVXBUaVFlNm1COW1xdzFYd3FYZzQ2L1lLMS9sYzVTd1ZXdXdYVXE4SVo1bVUyaGFneWVHeFRxaWFYTnpMSVQ4NDQ1aHFZeDRodG1DdFVMc0Nxc0FPd2VYUURyeEROeVhhVFlpUmZNeWNWbFI0WWc2ZlQ5SVo0Q3lHQmJsSC90U1U5R294bDZSWGx4b0tKa2JBWmJDSWlQaHpKcXljOElCKzlXNDNyM1d3a1FEU1hzNnd3Zm9reFlqQ1ByS3hQVVM0c3FWUHRyWVJ6R21qZWpZSk5lUzNKM0UyQ2Jzcmh1aEZVdmNNRU0rWVNON2JOL3BHWjh0ZGJXSHNaRW82aXBOL3JST1RyQ1V5eW9KT1lMYVVCbWdCY3J0VC84VnA3YUpmcVlRc0RWeVp5RUR6ZENFZ1YwN1RWN2I4SnVJS1Q4Q0FueHhJRlJyLzlJZlpCRk85dXNwejl5OWFrWnc1cVhIR2JzTjUxTUhQNkpsRXhzekN5TmJhR0V4VXd1dktORm5jPSIsIm1hYyI6IjQ1NDI1NDhmYThhODFiN2JkNmM2NDRjOWRjZmIxNDE5ODliNGQ3NjEyZDEzNmYzMTlhZThkZGI0MGI0YWQxNDEiLCJ0YWciOiIifQ%3D%3D&user=7d8f6191d6b3f074c60a8b326466582e&EIO=4&transport=websocket"
-AUTH_MESSAGE = os.environ.get("AUTH_MESSAGE")
+AUTH_MESSAGE = os.environ.get("AUTH_MESSAGE") or "7d8f6191d6b3f074c60a8b326466582e"
 PING_INTERVAL = int(os.environ.get("PING_INTERVAL", 15))  # default 25 sec
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
-GROUP_ID = os.environ.get("GROUP_ID") or "-1002381674077"
-CHANNEL_URL = os.environ.get("CHANNEL_URL") or "https://t.me/+6LEttFWVymA0MDc1"
+BOT_TOKEN = os.environ.get("BOT_TOKEN") or "8262385394:AAF0saW-oHo-jxVESI5D1QbXu7ACpMfspFU"
+GROUP_ID = os.environ.get("GROUP_ID") or "-1002717088045"
+CHANNEL_URL = os.environ.get("CHANNEL_URL") or "https://t.me/mrchd112"
 DEV_URL = os.environ.get("DEV_URL") or "https://t.me/vxxwo"
-CHAT_URL = "https://t.me/HunterOFMethod"
+CHAT_URL = "https://t.me/DDXOTP"
 
 # -------------------- TELEGRAM --------------------
 
@@ -36,7 +36,7 @@ def send_to_telegram(text):
         "inline_keyboard": [
             [
                 {"text": "👑 Channel", "url": CHANNEL_URL},
-                
+                {"text": "🖥️ Developer", "url": DEV_URL}
             ],
             [
                 {"text": "🤝 Managed By", "url": CHAT_URL},
@@ -130,15 +130,18 @@ def on_message(ws, message):
                 service = "WhatsApp" if "whatsapp" in raw_msg.lower() else "Unknown"
 
                 telegram_msg = (
-    "<b>✅ New OTP Received Successfully...</b>\n"
-    f"🕒 <b>Time:</b> <code>{now}</code>\n"
-    f"🌍 <b>Country:</b> <code>{country}</code>\n"
-    f"🔑 <b>OTP:</b> <code>{otp}</code>\n"
-    f"📢 <b>Service:</b> <code>{originator}</code>\n"
-    f"📱 <b>Number:</b> <code>{masked}</code>\n\n"
-    "💬 <b>Message:</b>\n"
-    f"<pre>{html.escape(raw_msg)}</pre>\n\n"
-    "<i>⚡ POWERED BY Hunter OF Method</i>"
+    "<blockquote>🔔 <b><u>New OTP Alert</u></b></blockquote>\n"
+    "━━━━━━━━━━━━━━━━━━━━\n"
+    f"<blockquote>🌍 <b>Country:</b> <code>{country}</code></blockquote>\n"
+    f"<blockquote>🔑 <b>OTP:</b> <code>{otp}</code></blockquote>\n"
+    f"<blockquote>🕒 <b>Time:</b> <code>{now}</code></blockquote>\n"
+    f"<blockquote>📢 <b>Service:</b> <code>{originator}</code></blockquote>\n"
+    f"<blockquote>📱 <b>Number:</b> <code>{masked}</code></blockquote>\n"
+    "━━━━━━━━━━━━━━━━━━━━\n"
+    "<blockquote>💬 <b>Message:</b></blockquote>\n"
+    f"<blockquote><pre>{html.escape(raw_msg)}</pre></blockquote>\n"
+    "━━━━━━━━━━━━━━━━━━━━\n\n"
+    "<blockquote><i>⚡ Delivered instantly via @DDxOTP</i></blockquote>"
 )
 
 
