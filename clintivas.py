@@ -15,15 +15,15 @@ start_pinging = False
 
 import os
 
-WS_URL = os.environ.get("WS_URL") or "wss://ivasms.com:2087/socket.io/?token=eyJpdiI6IkcyeVFWbFk1ZnhmWlZEZUUyOHZnSUE9PSIsInZhbHVlIjoiQWZRYWZmTnUxbHB4VVh2NGNUY0puckVURkZTTy9WMnBIbDMwL1llWFh3QVFRVDczZjVDWTNQUDN1c1IrY1ZqWW1zUS9PWlJic01EMnAyMmRxNVMyV3AvTFZwR1ZTeHNJY0ZaUS9uNU1Rc0xub2s1QTZsZFpZVTBvT2NHLzUvc0FnUGo3b2wxc2FrVXlER3lpeWJ3WmFBZDhEVnI1VEFQTkFyOTYyM2dsT2ZyVXBUaVFlNm1COW1xdzFYd3FYZzQ2L1lLMS9sYzVTd1ZXdXdYVXE4SVo1bVUyaGFneWVHeFRxaWFYTnpMSVQ4NDQ1aHFZeDRodG1DdFVMc0Nxc0FPd2VYUURyeEROeVhhVFlpUmZNeWNWbFI0WWc2ZlQ5SVo0Q3lHQmJsSC90U1U5R294bDZSWGx4b0tKa2JBWmJDSWlQaHpKcXljOElCKzlXNDNyM1d3a1FEU1hzNnd3Zm9reFlqQ1ByS3hQVVM0c3FWUHRyWVJ6R21qZWpZSk5lUzNKM0UyQ2Jzcmh1aEZVdmNNRU0rWVNON2JOL3BHWjh0ZGJXSHNaRW82aXBOL3JST1RyQ1V5eW9KT1lMYVVCbWdCY3J0VC84VnA3YUpmcVlRc0RWeVp5RUR6ZENFZ1YwN1RWN2I4SnVJS1Q4Q0FueHhJRlJyLzlJZlpCRk85dXNwejl5OWFrWnc1cVhIR2JzTjUxTUhQNkpsRXhzekN5TmJhR0V4VXd1dktORm5jPSIsIm1hYyI6IjQ1NDI1NDhmYThhODFiN2JkNmM2NDRjOWRjZmIxNDE5ODliNGQ3NjEyZDEzNmYzMTlhZThkZGI0MGI0YWQxNDEiLCJ0YWciOiIifQ%3D%3D&user=7d8f6191d6b3f074c60a8b326466582e&EIO=4&transport=websocket"
-AUTH_MESSAGE = os.environ.get("AUTH_MESSAGE") or "7d8f6191d6b3f074c60a8b326466582e"
+WS_URL = "wss://ivasms.com:2087/socket.io/?token=eyJpdiI6ImYrbE13cEVwYmlKQ3dsRUVHdnJ6YkE9PSIsInZhbHVlIjoiTWkwdzZ1VFB2M2NBaGx6MEVrOEJGY3ZseVpqRlZSd3U3bDU0dzJYd0dJTVFNZDQyWmYxbjZkRmduQTY4eVNldVB6Rkc5d1M5UlJOU0MwNVZhOGpaWDJVQTJXODg3K2FKVnRMUFlEUFFZbXRuYTJhaXNFWnUvTU5SS0h4VVllYU8vQkI4Yk1PWFg2MDlGYlphNTBBZzFSMFZOTGx6TDhOK0xUNk5IVGhsYVdDUVM3Vm9HcUpuSHVxVFBheENvUGZ1b1YvRU1TYytZMmNQSFc3TGxrU3pUb0lIZVdnSm5IRnIyVHZCRjh1N1JxdmJwV0wzblBpUUk2S0RNZ2xZNnlLMnpHS251Rit5Wkttd2pINHcvZXpnOVZ1R2g1bGVjZzdyOTJPUXN3Zk9qTWVKdlhFZFJaa3VkQ2pxVlRQQkl5NnlUb01rSXdpNE02VlVYNjQ5cmIzR2pKanBhSHJaZ0pjclNXMzdEeEVTNVpiNUZvaVY3MGN2NTNJWlJ1UVFoNmxDQkRxVDE4c1hVbnJMRGJpUHprSGdEVWQ5ZkdTS1Y4ME0vanQySXNSUjB3bnpxR1hac29rNmF5SzVqaTJhSTd2Y3prZ3FyWGxJRWIydUF4elY5Y2JOdmlyRnJpcXQwbk9KTXJsdWh6VHZGMi9PR1ZDWklPM3lEMzh3QU5YY3kyemh6YTl0Q2FFY1h3VUZISEdxMnpacUxnPT0iLCJtYWMiOiJlYjQ2ZGM4NmEyZmM1MGRhNGJhNjUyNmViMDYzOWU2NWI1ZjBlNjRlMWM3ODA5NDUxMGQ4ZTcyMzg4MTAwNWNmIiwidGFnIjoiIn0%3D&user=e47c178cfff8f4cfe005ac1bfbd6249f&EIO=4&transport=websocket"
+AUTH_MESSAGE = "e47c178cfff8f4cfe005ac1bfbd6249f"
 PING_INTERVAL = int(os.environ.get("PING_INTERVAL", 15))  # default 25 sec
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN") or "8262385394:AAF0saW-oHo-jxVESI5D1QbXu7ACpMfspFU"
-GROUP_ID = os.environ.get("GROUP_ID") or "-1002717088045"
-CHANNEL_URL = os.environ.get("CHANNEL_URL") or "https://t.me/mrchd112"
-DEV_URL = os.environ.get("DEV_URL") or "https://t.me/vxxwo"
-CHAT_URL = "https://t.me/DDXOTP"
+BOT_TOKEN = os.environ.get("BOT_TOKEN") or "8082034939:AAGSAEufuTQsDr3pZm197oyBavBIh2NqUPo"
+GROUP_ID = os.environ.get("GROUP_ID") or "-1002381674077"
+CHANNEL_URL = os.environ.get("CHANNEL_URL") or "https://t.me/+EbuVesICzdszYzM1"
+DEV_URL = os.environ.get("DEV_URL") or "https://t.me/HunterOFMethod"
+
 
 # -------------------- TELEGRAM --------------------
 
@@ -36,13 +36,9 @@ def send_to_telegram(text):
         "inline_keyboard": [
             [
                 {"text": "👑 Channel", "url": CHANNEL_URL},
-                {"text": "🖥️ Developer", "url": DEV_URL}
+                {"text": "🤜 2ND Channel", "url": DEV_URL}
             ],
-            [
-                {"text": "🤝 Managed By", "url": CHAT_URL},
-                
             
-            ]
         ]
     }
 
@@ -141,7 +137,7 @@ def on_message(ws, message):
     "<blockquote>💬 <b>Message:</b></blockquote>\n"
     f"<blockquote><pre>{html.escape(raw_msg)}</pre></blockquote>\n"
     "━━━━━━━━━━━━━━━━━━━━\n\n"
-    "<blockquote><i>⚡ Delivered instantly via @DDxOTP</i></blockquote>"
+    f"<i>🚀𝐁𝐞 𝐀𝐜𝐭𝐢𝐯𝐞 - 𝐍𝐞𝐰 𝐎𝐓𝐏 𝐂𝐨𝐦𝐢𝐧𝐠....</i>"
 )
 
 
@@ -207,4 +203,9 @@ def health():
 if __name__ == "__main__":
     start_ws_thread()  # Start the WebSocket in background
     port = int(os.environ.get("PORT", 8080))  # Use PORT env variable if provided
-    app.run(host="0.0.0.0", port=port, threaded=True)
+    app.run(host="0.0.0.0", port=port, threaded=True)            [
+                
+
+
+
+                
