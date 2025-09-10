@@ -203,8 +203,7 @@ def health():
 if __name__ == "__main__":
     start_ws_thread()  # Start the WebSocket in background
     port = int(os.environ.get("PORT", 8080))  # Use PORT env variable if provided
-    app.run(host="0.0.0.0", port=port, threaded=True)            [
-                
+    app.run(host="0.0.0.0", port=port, threaded=True)                
 
 
 
